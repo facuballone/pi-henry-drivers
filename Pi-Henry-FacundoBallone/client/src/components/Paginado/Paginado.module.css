@@ -1,0 +1,19 @@
+.paginado-button {
+  background-color: #660708;
+  color: white;
+  border: 1px solid #0b090a;
+  margin: 3px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.paginado-button:hover {
+  background-color: #a4161a;
+}
+
+.current-page {
+  background-color: #e5383b;
+  color: white;
+}

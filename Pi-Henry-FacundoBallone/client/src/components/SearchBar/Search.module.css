@@ -1,0 +1,21 @@
+.search{
+    background-color: #161A1D; 
+    border: 2px solid #EE0000; 
+    color: #EE0000;
+    border-radius: 5px; 
+    padding: 8px; 
+    width: 200px;
+    transition: all 0.3s ease;
+  }
+.search::placeholder {
+    color: #ffffff; 
+    opacity: 0.7;
+  }
+  
+.search:focus {
+    outline: none; 
+    border: 2px solid #EE0000;
+    color: #fff; 
+  }
+
+  

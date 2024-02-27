@@ -1,0 +1,107 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #161a1d;
+  border-radius: 5px;
+  padding: 20px;
+  max-width: 100%;
+  margin: 0 auto;
+  color: #fff;
+}
+
+.form-container input {
+  margin: 10px 0;
+  background-color: #0b090a;
+  color: #fff;
+  /* border: 2px solid #b71c1c; */
+  border-radius: 5px;
+  padding: 10px;
+  width: 98%;
+  transition: all 0.3s ease;
+}
+
+.form-container button {
+  background-color: #0b090a;
+  color: #fff;
+  /* border: 2px solid #b71c1c; */
+  border-radius: 5px;
+  padding: 10px 20px;
+  width: auto;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.form-container button:hover {
+  background-color: #0b090a;
+}
+
+.form-container select {
+  margin: 10px 0;
+  background-color: #0b090a;
+  color: #fff;
+  /* border: 2px solid #b71c1c; */
+  border-radius: 5px;
+  width: 100%;
+  height: 40px;
+}
+.form-container select option {
+  background-color: #0b090a;
+  color: #fff;
+}
+
+.teamselected {
+  background-color: #0b090a;
+  color: #fff;
+  /* border: 2px solid #b71c1c; */
+}
+
+.error {
+  /* border: 2px solid red; */
+  background-color: #ffe6e6;
+  color: red;
+  width: 98%;
+}
+
+.error-message {
+  color: red;
+  font-size: 2Opx;
+  margin-top: 4px;
+}
+
+button:disabled {
+  background-color: #b1a7a6;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.modalContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(244, 243, 243, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.successBtn {
+  position: absolute;
+  background: #484848;
+  width: 250px;
+  height: 100px;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(240, 225, 11, 0.2);
+  border: 2px solid #b71c1c;
+}
+
+.successBtn button {
+  border: 2px solid #b71c1c;
+  background: #f5f3f4;
+  color: #0b090a;
+}
