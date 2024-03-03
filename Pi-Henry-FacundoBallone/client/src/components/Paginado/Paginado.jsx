@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 import React from "react";
 import styles from "./Paginado.module.css";
 
@@ -15,9 +17,6 @@ const Paginado = ({ allDrivers, driverPerPage, paginado, currentPage }) => {
     startPage + pagesToShow - 1
   );
 
-  if (endPage - startPage < pagesToShow - 1) {
-    startPage = endPage - pagesToShow + 1;
-  }
 
   const visiblePageNumbers = pageNumbers.slice(startPage - 1, endPage);
 

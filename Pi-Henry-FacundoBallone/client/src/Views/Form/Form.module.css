@@ -3,10 +3,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #161a1d;
+  background-color: #272828;
   border-radius: 5px;
   padding: 20px;
-  max-width: 100%;
+  width: 90%;  
   margin: 0 auto;
   color: #fff;
 }
@@ -105,3 +105,9 @@ button:disabled {
   background: #f5f3f4;
   color: #0b090a;
 }
+
+.texto-pequeño {
+  font-size: 10px; 
+  color: #f8f8f8;
+}
+

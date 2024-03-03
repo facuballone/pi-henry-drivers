@@ -1,5 +1,5 @@
 .container{
-    background-color: rgba(106, 110, 111, 0.831);
+    background-color: rgba(87, 84, 84, 0.831);
     flex-direction: row;
     display: flex;
     height: 100%;
@@ -7,16 +7,18 @@
     width: 100%;
 }
 
-.info{
+.info {
     flex-direction: column;
     width: 50%;
     text-align: left;
     margin-left: 40px;
-}
+    color: black; /* Cambia el color del texto a negro */
+  }
 
 .dni{
     width: 50%;
     flex-direction: column;
+    color:black
 }
 
 .img {

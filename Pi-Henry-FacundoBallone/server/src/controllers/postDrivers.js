@@ -10,7 +10,7 @@ const postDrivers = async (
   createdinDB,
   teams
 ) => {
-  Driver.findOrCreate({
+  Driver.findOrCreate({ //para buscar si existe lo de where
     where: { forename, surname },
     defaults: {
       forename,
@@ -23,7 +23,7 @@ const postDrivers = async (
       teams,
     },
   })
-    .then(([user, created]) => {
+    .then(([user, created]) => {  // rp
       if (created) {
         return `Nuevo usuario creado: ${user.surname}`;
       } else {

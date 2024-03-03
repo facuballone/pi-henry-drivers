@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import {
   GET_BYNAME,
   GET_DRIVERS,
@@ -67,9 +68,16 @@ export const addDriver = (driver)=>{
   driver.teams = driver.teams.join(",")
 
   return async function (dispatch){
-    await axios.post("http://localhost:3001/drivers/form", driver)
-  }
-}
+    try{  
+      await axios.post("http://localhost:3001/drivers/form", driver)
+      alert("Salio todo excelente")
+    } catch (error){
+      alert("Ocurrio un error inesperado")
+    }
+    }
+  } 
+
+  
 export const getTeams = ()=>{
   return async function(dispatch){
     let teams = await axios.get("http://localhost:3001/teams")

@@ -1,3 +1,4 @@
+/* eslint-disable no-case-declarations */
 import {
   GET_BYNAME,
   GET_DRIVERS,
@@ -28,6 +29,7 @@ const reducer = (state = initialState, action) => {
     case FILTER_ORIGIN:
       const origin = action.payload;
       const drivers = state.allDrivers;
+      
       
       const filtered =
         origin === "database"

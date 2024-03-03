@@ -68,10 +68,11 @@ const Detail = () => {
     surName = surname;
   } else {
     foreName = driver.forename;
-    surName = driver.surname;
+    surName = driver.surname; 
+    //en caso de que driver name no exista se les asigna el valor
   }
 
-  console.log(driver);
+  
   return (
     <div className={styles.error}>
       <NavBar />

@@ -12,10 +12,16 @@
 }
 
 .img {
-  width: 70px;
+  width: 50px;
   height: auto;
   margin-right: 5px;
   margin-left: 10px;
+  background-color: #0b090a;
+  border: 2px solid #b71c1c;
+  border-radius: 10px; /* Ajusta el valor según el grado de redondez que desees */
+}
+.img:hover {
+  box-shadow: 0 0 5px 5px #b71c1c9c; /* Define el brillo al pasar el mouse sobre la imagen */
 }
 
 .totalConteiner select {

@@ -20,5 +20,4 @@ const getDriverByName = async (name) => {
     return driver;
   }
 };
-
 module.exports = getDriverByName;

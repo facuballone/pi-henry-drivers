@@ -15,9 +15,9 @@ const getTeams = async () => {
           const splitTeams = teams.split(",").map((team) => team.trim());
           return [...acc, ...splitTeams];
         }, []);
-      teams = [...new Set(teams)];
+      teams = [...new Set(teams)]; //borra los dup
       const teamsobj = teams.map((name) => ({ name }));
-      await Teams.bulkCreate(teamsobj);
+      await Teams.bulkCreate(teamsobj); //almacenar multiples registros en bd
       return teams.sort();
     } catch (error) {
       throw new Error("Error en la peticion de la API");

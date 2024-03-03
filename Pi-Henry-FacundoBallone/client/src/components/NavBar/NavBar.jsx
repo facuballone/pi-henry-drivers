@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import {
   filterOrigin,
   orderDrivers,
@@ -40,7 +41,9 @@ const NavBar = ({setCurrentPage}) => {
 
   return (
     <navbar className={styles.totalConteiner}>
-      <img src={logof1} className={styles.img} />
+      <Link to={"/"}>
+      <img src={logof1} className={styles.img} />                    
+      </Link>
       <Link to="/home">
         <button onClick={handleHomeButton}>Home</button>
       </Link>

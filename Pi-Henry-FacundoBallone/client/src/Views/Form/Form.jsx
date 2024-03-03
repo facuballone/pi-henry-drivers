@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
 import { useDispatch, connect, useSelector } from "react-redux";
 import NavBar from "../../components/NavBar/NavBar";
@@ -35,13 +36,13 @@ const Form = () => {
     createdinDB: true,
   });
   const [error, setError] = useState({
-    forename: null,
-    surname: null,
-    dob: null,
-    nationality: null,
-    description: null,
+    forename: validateForename(driver.forename),
+    surname: validateSurname(driver.surname),
+    dob: validateDob(driver.dob),
+    nationality: validateNationality(driver.nationality),
+    description: validateDescription(driver.description),
     teams: null,
-    image: null,
+    image: validateImage(driver.image),
   });
   const [formValid, setFormValid] = useState(false);
   const [success, setSuccess] = useState(false);
@@ -72,7 +73,7 @@ const Form = () => {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault(); //evitar que se recargue la pagina 
     dispatch(addDriver(driver));
     setDriver({
       forename: "",
@@ -145,7 +146,7 @@ const Form = () => {
                 placeholder="Name"
                 className={error.forename ? "error" : ""}
               />
-              {error.forename && <div className="error">{error.forename}</div>}
+              {error.forename && <div className={`error ${styles["texto-pequeño"]}`}>{error.forename}</div>}
               <input
                 key={"driver-surname"}
                 type="text"
@@ -154,7 +155,7 @@ const Form = () => {
                 onChange={handleChange}
                 placeholder="Surname"
               />
-              {error.surname && <div className="error">{error.surname}</div>}
+              {error.surname && <div className={`error ${styles["texto-pequeño"]}`}>{error.surname}</div>}
               <input
                 key={"driver-dob"}
                 type="text"
@@ -163,7 +164,7 @@ const Form = () => {
                 onChange={handleChange}
                 placeholder="Date of birth (YYYY-MM-DD)"
               />
-              {error.dob && <div className="error">{error.dob}</div>}
+              {error.dob && <div className={`error ${styles["texto-pequeño"]}`}>{error.dob}</div>}
             </div>
             <div >
               <input
@@ -175,7 +176,7 @@ const Form = () => {
                 placeholder="Description"
               />
               {error.description && (
-                <div className="error">{error.description}</div>
+                <div className={`error ${styles["texto-pequeño"]}`}>{error.description}</div>
               )}
               <input
                 key={"driver-nationality"}
@@ -185,9 +186,7 @@ const Form = () => {
                 onChange={handleChange}
                 placeholder="Nationality"
               />
-              {error.nationality && (
-                <div className="error">{error.nationality}</div>
-              )}
+              {error.nationality && (<div className={`error ${styles["texto-pequeño"]}`}>{error.nationality}</div>)}
               <input
                 key={"driver-img"}
                 type="text"
@@ -196,7 +195,7 @@ const Form = () => {
                 onChange={handleChange}
                 placeholder="URL image"
               />
-              {error.image && <div className="error">{error.image}</div>}
+              {error.image && <div className={`error ${styles["texto-pequeño"]}`}>{error.image}</div>}
             </div>
             <select
               value={"defaultValue"}
@@ -244,4 +243,5 @@ const mapStateToProps = (state) => ({
   drivers: state.drivers,
 });
 
+// eslint-disable-next-line react-refresh/only-export-components
 export default connect(mapStateToProps)(Form);
